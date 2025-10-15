@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - Concert Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>Concert Hub</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="book-tickets.html">Book Tickets</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="booking-page">
+        <div class="container">
+            <h2>Book Your Tickets</h2>
+            
+            <form class="booking-form">
+                <div class="form-section">
+                    <h3>Select Concert</h3>
+                    <select name="concert" required>
+                        <option value="">Choose a concert</option>
+                        <option value="rock-legends">Rock Legends Live - December 15, 2025</option>
+                        <option value="jazz-night">Jazz Night Special - December 22, 2025</option>
+                        <option value="pop-stars">Pop Stars United - January 5, 2026</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <h3>Ticket Type</h3>
+                    <div class="ticket-options">
+                        <label>
+                            <input type="radio" name="ticket-type" value="general" required>
+                            General Admission - $75
+                        </label>
+                        <label>
+                            <input type="radio" name="ticket-type" value="premium" required>
+                            Premium Seating - $150
+                        </label>
+                        <label>
+                            <input type="radio" name="ticket-type" value="vip" required>
+                            VIP Package - $300
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Number of Tickets</h3>
+                    <input type="number" name="quantity" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Payment Information</h3>
+                    <input type="text" name="card-number" placeholder="Card Number" required>
+                    <div class="card-details">
+                        <input type="text" name="expiry" placeholder="MM/YY" required>
+                        <input type="text" name="cvv" placeholder="CVV" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-btn">Complete Booking</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Concert Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
